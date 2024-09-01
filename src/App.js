@@ -1,24 +1,50 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginPage from './Components/LoginPage';
+import { LoginData } from './Contexts/LoginData';
+import { NotesData } from './Contexts/NotesData';
+import SaveData from './Components/SaveData';
+import AddaNote from './Components/AddaNote';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import PopupAlert from './Components/PopupAlert';
+import Navbar from './Components/Navbar';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+       <>
+       <LoginPage/>
+       </>
+      ),
+    },
+    {
+      path: "/addanote",
+      element:<>
+      <Navbar/>
+      <AddaNote/>
+      <PopupAlert/>
+      </>,
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>  
+
+      <LoginData>
+    <NotesData>
+    <RouterProvider router={router} />
+    </NotesData>
+    </LoginData>
+
+
+    </>
   );
 }
 
