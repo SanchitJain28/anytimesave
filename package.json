@@ -1,5 +1,5 @@
 {
-  "homepage": "http://SanchitJain28.github.io/anytimesave",
+  "homepage": "http://SanchitJain28.github.io/anytimesavenew",
   "name": "anytimesave",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gh-pages": "^6.1.1",
+    "github-pages": "^3.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
@@ -20,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -f build"
   },
   "eslintConfig": {
     "extends": [
