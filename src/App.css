@@ -4,9 +4,11 @@
 
 
 .App {
-  text-align: center;
+  background-color: black;
 }
-
+textarea {
+  height: 200px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,7 +28,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: red
 }
 
 .App-link {

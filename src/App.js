@@ -8,18 +8,21 @@ import AddaNote from './Components/AddaNote';
 import {
   createBrowserRouter,
   RouterProvider,
+  createHashRouter,
   Route,
   Link,
 } from "react-router-dom";
 import PopupAlert from './Components/PopupAlert';
 import Navbar from './Components/Navbar';
+import FetchNotes from './Components/FetchNotes';
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: (
        <>
+       <Navbar/>
        <LoginPage/>
        </>
       ),
@@ -27,21 +30,36 @@ function App() {
     {
       path: "/addanote",
       element:<>
+      <div className="bg-zinc-950 text-white ">
       <Navbar/>
       <AddaNote/>
       <PopupAlert/>
+      </div>
       </>,
-    },
+    },{
+      path:"/homepage",
+      element:<>
+      <div className="bg-zinc-950  text-white">
+      <Navbar/>
+          <FetchNotes/>
+          <PopupAlert/>
+
+      </div>
+
+          </>
+    }
   ]);
   return (
     
     <>  
-
-      <LoginData>
+<div className="App">
+<LoginData>
     <NotesData>
     <RouterProvider router={router} />
     </NotesData>
     </LoginData>
+</div>
+
 
 
     </>

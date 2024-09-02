@@ -49,7 +49,7 @@ const addDocement=async(tag,task,goal)=>{
         name: tag,
         note: task,
         result:goal,
-        date:new Date()
+        date: Date()
       });
       getData()
       setpopup({type:"add",status:true,message:"the message has been added"})

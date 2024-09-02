@@ -7,12 +7,11 @@ export default function Navbar() {
     const notesdata=useContext(NoteDataContext)
   return (
     <>
-    <div className=" p-4 bg-slate-950 flex justify-between bg-red-400">
+    <div className="p-2 bg-zinc-900	 flex justify-between bg-red-400">
         <div className="flex text-white">
-        <img src={logindata.LoginInfo.DisplayPhoto} width={"50px"} className='rounded-3xl'/>
+        <img src={logindata.LoginInfo.DisplayPhoto} width={"20px"} className=''/>
         <div className="flex flex-col mx-4">
-        <p className='font-mono text-xl'>{logindata.LoginInfo.Username}</p>
-        <p className='font-mono '>You have been logged in</p>
+        <p className='text'>Hi,{(logindata.LoginInfo.Username).toLowerCase()}!</p>
         </div>
 
         </div>
@@ -20,7 +19,7 @@ export default function Navbar() {
         <button onClick={()=>{
             logindata.signInWithGoogle()
         }
-        } className='border px-4 text-white hover:bg-sky-700 transition duration-300'>LogIn with Anouther Account</button>
+        } className=' px-4 text-white hover:bg-sky-700 transition duration-300'><i class="fa-solid fa-right-to-bracket"></i></button>
     </div>
     </>
   )
