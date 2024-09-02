@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex text-white">
         <img src={logindata.LoginInfo.DisplayPhoto} width={"20px"} className=''/>
         <div className="flex flex-col mx-4">
-        <p className='text'>Hi,{(logindata.LoginInfo.Username).toLowerCase()}!</p>
+        <p className='text'>Hi,{(logindata.LoginInfo.Username)}!</p>
         </div>
 
         </div>

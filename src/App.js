@@ -17,6 +17,10 @@ import Navbar from './Components/Navbar';
 import FetchNotes from './Components/FetchNotes';
 
 function App() {
+
+  const fucking=()=>{
+    console.log("chup raand helloworld")
+  }
   const router = createHashRouter([
     {
       path: "/",
